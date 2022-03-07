@@ -292,7 +292,7 @@ if a=="8/3":
         meow.rt(160)
         meow.rt(270)    
         turtle.colormode(255) 
-    for i in range(0,150):
+    for i in range(0,300):
         meow.color(randint(0, 255),randint(0, 255),randint(0, 255))
         meow.begin_fill()
         meow.fd(150)

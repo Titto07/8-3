@@ -1,5 +1,5 @@
 import turtle
-import turtle
+from random import randint
 def C(x,y):
     turtle.pensize(10)
     turtle.pencolor("red")
@@ -52,7 +52,6 @@ def gach(x,y):
     turtle.left(60)
     turtle.forward(130)
 def flower():
-    #Flower
     turtle.penup()
     turtle.goto(0, -150)
 
@@ -218,8 +217,6 @@ def flower():
     turtle.forward(4)
     turtle.circle(10, 120)
     turtle.end_fill()
-    turtle.hideturtle()
-    turtle.done()
 
 a=input("Nhập ngày: ")
 from time import sleep
@@ -273,13 +270,40 @@ if a=="8/3":
     print("#                                           $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$                                          #");sleep(0.3)                                       #");sleep(0.3)
     print("#                                                                                                                                  #");sleep(0.3)  
     print("#####################################################################################################################################");sleep(0.3)
-#turtle
+
+    a=turtle.Screen()
+    a.setup(width=1.0,height=1.0,startx=None,starty=None)
     C(-150,150)
     M(-100,150)
     eight(0,130)
     gach(130,160)
     three(180,160)
     flower()
-    screen=turtle.getscreen
-    screen.mainloop()
-        
+    a.bgcolor("#942727")
+    meow = turtle.Turtle()
+    meow.color("#660000")
+    meow.speed(0)
+    meow.up()
+    meow.down()
+    for i in range (60):
+        meow.circle(300,20,5)
+        meow.lt(520)
+        meow.circle(300,20,5)
+        meow.rt(160)
+        meow.rt(270)    
+        turtle.colormode(255) 
+    for i in range(0,150):
+        meow.color(randint(0, 255),randint(0, 255),randint(0, 255))
+        meow.begin_fill()
+        meow.fd(150)
+        meow.rt(90)
+        meow.fd(150)
+        meow.rt(90)
+        meow.fd(150)
+        meow.rt(90)
+        meow.fd(150)
+        meow.end_fill()
+        meow.penup()
+        meow.goto(randint(-600,1500), randint(-300,300))
+        meow.pendown()
+    a.mainloop()
